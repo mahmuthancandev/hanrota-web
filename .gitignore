@@ -1,0 +1,9 @@
+api/
+*.sql
+.env
+.vscode/
+*.log
+Thumbs.db
+.DS_Store
+admin.php
+assets/images/anka_logo.png
