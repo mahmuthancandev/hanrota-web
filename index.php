@@ -5,127 +5,292 @@
 
 <!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="container hero-content">
-        <h4 style="color: var(--secondary-color); margin-bottom: 10px;">Geleceğin Teknolojisi</h4>
-        <h1>Dijital Dünyada <br> <span style="font-family: 'Orbitron'; -webkit-text-stroke: 1px #fff; color: transparent;">Fark Yaratın</span></h1>
-        <p>Hanrotaweb olarak markanızı modern web teknolojileri, etkileyici 3D tasarımlar ve kusursuz kullanıcı deneyimi ile bir üst seviyeye taşıyoruz.</p>
-        <div style="display: flex; gap: 20px;">
-            <a href="#projects" class="btn">Projelerimiz</a>
-            <a href="#contact" class="btn" style="border-color: #fff;">Bize Ulaşın</a>
-        </div>
-    </div>
-</section>
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
 
-<!-- About Section -->
-<section id="about">
-    <div class="container">
-        <div class="glass-panel gs-reveal">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
-                <div>
-                    <h2 style="margin-bottom: 20px;">Biz Kimiz?</h2>
-                    <p style="color: #ccc; margin-bottom: 20px;">
-                        Yazılım dünyasının sınırlarını zorlayan, yaratıcı ve analitik düşünen bir ekibiz. 
-                        Sıradan web siteleri değil, yaşayan, etkileşimli dijital deneyimler tasarlıyoruz.
-                    </p>
-                    <ul style="list-style: none; margin-bottom: 30px;">
-                        <li style="margin-bottom: 10px; display: flex; align-items: center;">
-                            <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Modern UI/UX Tasarım
-                        </li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: center;">
-                            <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> Yüksek Performanslı Kodlama
-                        </li>
-                        <li style="margin-bottom: 10px; display: flex; align-items: center;">
-                            <i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 10px;"></i> 3D Web Teknolojileri
-                        </li>
-                    </ul>
+    <div class="container hero-layout">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <i class="fas fa-bolt"></i>
+                Hanrota Studio
+            </div>
+
+            <h1>Dijital ürün sistemleri.</h1>
+            <p>
+                Markanız için hızlı, sade ve ölçeklenebilir dijital ürünler tasarlıyoruz.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn hero-btn hero-btn-primary">
+                    Projeni Başlat
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#projects" class="btn hero-btn hero-btn-secondary">
+                    Çalışmaları Gör
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+
+            <div class="hero-proof">
+                <div class="proof-badges" aria-hidden="true">
+                    <span><i class="fas fa-layer-group"></i></span>
+                    <span><i class="fas fa-code"></i></span>
+                    <span><i class="fas fa-chart-line"></i></span>
                 </div>
-                <div style="position: relative;">
-                    <!-- Placeholder for an image or graphic -->
-                    <div style="width: 100%; height: 300px; background: linear-gradient(45deg, var(--primary-color), transparent); border-radius: 16px; opacity: 0.5;"></div>
-                    <h1 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 8rem; opacity: 0.1;">ART</h1>
+                <div>
+                    <strong>Web • Mobile • QR Systems</strong>
+                    <small>Modern markalar için ölçeklenebilir yazılım sistemleri.</small>
                 </div>
             </div>
         </div>
+
+        <div class="hero-visual" aria-label="Hanrota Studio dashboard önizlemesi">
+            <div class="hero-orbit hero-orbit-one"></div>
+            <div class="hero-orbit hero-orbit-two"></div>
+
+            <div class="dashboard-card parallax-layer" data-depth="12" data-base-transform="rotateX(2deg) rotateY(-3deg)">
+                <div class="dashboard-topbar">
+                    <div>
+                        <span class="dashboard-mark"></span>
+                        Hanrota OS
+                    </div>
+                    <div class="dashboard-user">
+                        <span></span>
+                        Live
+                    </div>
+                </div>
+
+                <div class="dashboard-body">
+                    <aside class="dashboard-sidebar">
+                        <span class="active"><i class="fas fa-chart-line"></i> Overview</span>
+                        <span><i class="fas fa-qrcode"></i> QR</span>
+                        <span><i class="fas fa-layer-group"></i> Projects</span>
+                        <span class="sidebar-stat"><strong>8</strong> Live builds</span>
+                        <span class="sidebar-stat"><strong>99.9%</strong> API uptime</span>
+                    </aside>
+
+                    <div class="dashboard-main">
+                        <div class="metric-grid">
+                            <div class="metric-card">
+                                <small>Active Projects</small>
+                                <strong>12</strong>
+                                <span>Live delivery</span>
+                            </div>
+                            <div class="metric-card">
+                                <small>Launch Score</small>
+                                <strong>98%</strong>
+                                <span>On track</span>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <strong>Product Growth</strong>
+                                <span>Live roadmap</span>
+                            </div>
+                            <div class="chart-lines">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <svg class="chart-svg" viewBox="0 0 360 150" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="heroChartGradient" x1="0" x2="1" y1="0" y2="0">
+                                        <stop offset="0%" stop-color="#5b5cff" />
+                                        <stop offset="100%" stop-color="#9b5cff" />
+                                    </linearGradient>
+                                </defs>
+                                <path class="chart-fill" d="M8 118 C38 102, 52 132, 82 104 S128 72, 158 88 S202 125, 232 72 S278 38, 306 62 S336 48, 352 26 L352 150 L8 150 Z" />
+                                <path class="chart-line" d="M8 118 C38 102, 52 132, 82 104 S128 72, 158 88 S202 125, 232 72 S278 38, 306 62 S336 48, 352 26" />
+                            </svg>
+                        </div>
+
+                        <div class="dashboard-footer-row">
+                            <div>
+                                <small>Launch readiness</small>
+                                <strong>Production build</strong>
+                            </div>
+                            <div class="sprint-progress" aria-hidden="true">
+                                <span></span>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-insights">
+                            <div>
+                                <small>Next release</small>
+                                <strong>Client portal</strong>
+                            </div>
+                            <span>Ready</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="floating-card system-card parallax-layer" data-depth="16">
+                <div class="floating-card-label">
+                    <i class="fas fa-shield-halved"></i>
+                    System Health
+                </div>
+                <div class="health-lines" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <small>All services operational</small>
+            </div>
+        </div>
+    </div>
+
+    <a class="scroll-indicator" href="#services" aria-label="Aşağı kaydır">
+        <span></span>
+    </a>
+</section>
+
+<!-- Capabilities -->
+<section class="capability-strip" aria-label="Hanrota Studio kabiliyetleri">
+    <div class="container capability-list">
+        <span>Web Development</span>
+        <span>Mobile Apps</span>
+        <span>QR Systems</span>
+        <span>Backend & API</span>
+        <span>UI/UX Design</span>
+        <span>Product Strategy</span>
     </div>
 </section>
 
 <!-- Services Section -->
-<section id="services">
+<section id="services" class="studio-section">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 60px;" class="gs-reveal">
-            <h4 style="color: var(--secondary-color);">Hizmetlerimiz</h4>
-            <h2>Neler Yapıyoruz?</h2>
+        <div class="section-heading gs-reveal">
+            <span class="section-kicker">Hizmetler</span>
+            <h2>İşinizi taşıyacak dijital sistemler.</h2>
+            <p>Hanrota Studio, fikir aşamasından yayına ve büyümeye kadar ürününüzün tüm teknik ve görsel omurgasını kurar.</p>
         </div>
-        
-        <div class="services-grid">
-            <div class="service-card gs-reveal">
-                <i class="fas fa-laptop-code service-icon"></i>
-                <h3>Web Geliştirme</h3>
-                <p style="color: #aaa; margin-top: 15px;">Hızlı, güvenli ve SEO uyumlu kurumsal web siteleri.</p>
-            </div>
-            <div class="service-card gs-reveal">
-                <i class="fas fa-cube service-icon"></i>
-                <h3>3D Tasarım</h3>
-                <p style="color: #aaa; margin-top: 15px;">Three.js ile web sitenizde etkileyici 3D deneyimler.</p>
-            </div>
-            <div class="service-card gs-reveal">
-                <i class="fas fa-mobile-alt service-icon"></i>
-                <h3>Mobil Uyumlu</h3>
-                <p style="color: #aaa; margin-top: 15px;">Tüm cihazlarda kusursuz çalışan responsive tasarımlar.</p>
-            </div>
-            <div class="service-card gs-reveal">
-                <i class="fas fa-rocket service-icon"></i>
-                <h3>Dijital Pazarlama</h3>
-                <p style="color: #aaa; margin-top: 15px;">Markanızı dijital dünyada öne çıkaracak stratejiler.</p>
-            </div>
+
+        <div class="studio-grid services-grid">
+            <article class="studio-card gs-reveal">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Web Development</h3>
+                <p>Hızlı, güvenli, SEO odaklı ve markanızın seviyesini yansıtan kurumsal web deneyimleri.</p>
+            </article>
+            <article class="studio-card gs-reveal">
+                <i class="fas fa-mobile-screen"></i>
+                <h3>Mobile Apps</h3>
+                <p>React Native ve modern mobil altyapılarla ölçeklenebilir iOS ve Android ürünleri.</p>
+            </article>
+            <article class="studio-card gs-reveal">
+                <i class="fas fa-qrcode"></i>
+                <h3>QR Systems</h3>
+                <p>Restoran, etkinlik ve ekipler için yönetilebilir QR platformları ve analiz panelleri.</p>
+            </article>
+            <article class="studio-card gs-reveal">
+                <i class="fas fa-diagram-project"></i>
+                <h3>Product Systems</h3>
+                <p>Operasyon, içerik, panel ve müşteri akışlarını düzenleyen özel yazılım sistemleri.</p>
+            </article>
+            <article class="studio-card gs-reveal">
+                <i class="fas fa-server"></i>
+                <h3>Backend & API</h3>
+                <p>Sağlam veri yapıları, güvenli API'ler ve uzun vadeli büyümeye hazır sistem mimarisi.</p>
+            </article>
+            <article class="studio-card gs-reveal">
+                <i class="fas fa-pen-nib"></i>
+                <h3>UI/UX Design</h3>
+                <p>Premium his veren arayüzler, net kullanıcı akışları ve ürün odaklı tasarım sistemleri.</p>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Projects Section -->
-<section id="projects">
+<section id="projects" class="studio-section studio-section-muted">
     <div class="container">
-        <div style="text-align: center; margin-bottom: 60px;" class="gs-reveal">
-            <h4 style="color: var(--secondary-color);">Portfolyo</h4>
-            <h2>Son Projelerimiz</h2>
+        <div class="section-heading section-heading-row gs-reveal">
+            <div>
+                <span class="section-kicker">Seçili İşler</span>
+                <h2>Gerçek iş hedefleri için tasarlanan ürünler.</h2>
+            </div>
+            <a href="#contact" class="text-link">Proje konuşalım <i class="fas fa-arrow-right"></i></a>
         </div>
 
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card gs-reveal">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80" alt="Project 1" class="project-img">
-                <div class="project-info">
-                    <h3>Cyberpunk E-Ticaret</h3>
-                    <p style="color: #ddd;">Geleceğin alışveriş deneyimi.</p>
+        <div class="work-grid">
+            <article class="work-card gs-reveal">
+                <div class="work-preview work-preview-dashboard">
+                    <span></span><span></span><span></span>
                 </div>
-            </div>
-             <!-- Project 2 -->
-             <div class="project-card gs-reveal">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80" alt="Project 2" class="project-img">
-                <div class="project-info">
-                    <h3>Neon Finans App</h3>
-                    <p style="color: #ddd;">Kripto para takip platformu.</p>
+                <div>
+                    <small>Web Application</small>
+                    <h3>Hanrota Dashboard</h3>
+                    <p>Operasyon, analiz ve proje akışlarını tek panelde birleştiren SaaS deneyimi.</p>
                 </div>
-            </div>
-             <!-- Project 3 -->
-             <div class="project-card gs-reveal">
-                <img src="https://images.unsplash.com/photo-1558655146-d09347e0c766?auto=format&fit=crop&q=80" alt="Project 3" class="project-img">
-                <div class="project-info">
-                    <h3>AI Agency</h3>
-                    <p style="color: #ddd;">Yapay zeka çözümleri.</p>
+            </article>
+            <article class="work-card gs-reveal">
+                <div class="work-preview work-preview-qr">
+                    <i class="fas fa-qrcode"></i>
                 </div>
-            </div>
+                <div>
+                    <small>QR Platform</small>
+                    <h3>QR Menu System</h3>
+                    <p>Markaya özel menü yönetimi, QR analytics ve mobil uyumlu ürün sayfaları.</p>
+                </div>
+            </article>
+            <article class="work-card gs-reveal">
+                <div class="work-preview work-preview-system">
+                    <i class="fas fa-diagram-project"></i>
+                </div>
+                <div>
+                    <small>Product System</small>
+                    <h3>Operations Portal</h3>
+                    <p>İç ekipler için proje, içerik ve müşteri süreçlerini düzenleyen özel yönetim paneli.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section id="about" class="studio-section">
+    <div class="container">
+        <div class="section-heading gs-reveal">
+            <span class="section-kicker">Süreç</span>
+            <h2>Fikirden yayına net bir yol haritası.</h2>
+            <p>Her projede stratejiyi, arayüzü ve mühendisliği aynı kalite standardında ele alıyoruz.</p>
+        </div>
+
+        <div class="process-grid">
+            <article class="process-card gs-reveal">
+                <span>01</span>
+                <h3>Discovery</h3>
+                <p>İş hedefi, kullanıcı ihtiyacı ve teknik kapsam netleşir.</p>
+            </article>
+            <article class="process-card gs-reveal">
+                <span>02</span>
+                <h3>Design</h3>
+                <p>Premium arayüz, kullanıcı akışı ve ürün sistemi hazırlanır.</p>
+            </article>
+            <article class="process-card gs-reveal">
+                <span>03</span>
+                <h3>Development</h3>
+                <p>Frontend, backend, mobil ve entegrasyonlar üretime hazır geliştirilir.</p>
+            </article>
+            <article class="process-card gs-reveal">
+                <span>04</span>
+                <h3>Launch</h3>
+                <p>Yayın, ölçümleme ve büyüme süreci kontrollü şekilde yönetilir.</p>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" style="background: linear-gradient(to top, #111, var(--bg-color));">
+<section id="contact" class="final-cta">
     <div class="container">
-        <div class="glass-panel gs-reveal" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="margin-bottom: 30px;">Bir Projeniz mi Var?</h2>
-            <p style="margin-bottom: 40px; font-size: 1.2rem;">Hayallerinizi gerçeğe dönüştürmek için buradayız. Hemen iletişime geçin.</p>
-            <a href="mailto:info@hanrotaweb.com" class="btn">İletişime Geç</a>
+        <div class="final-cta-panel gs-reveal">
+            <span class="section-kicker">Başlayalım</span>
+            <h2>Bir sonraki dijital sisteminizi birlikte tasarlayalım.</h2>
+            <p>Web, mobil, QR veya özel yazılım projeniz için Hanrota Studio ile tanışın.</p>
+            <a href="mailto:info@hanrotaweb.com" class="btn hero-btn hero-btn-primary">
+                Strateji Görüşmesi Al
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
     </div>
 </section>

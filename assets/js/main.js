@@ -2,19 +2,21 @@
 const cursor = document.querySelector('.cursor');
 const links = document.querySelectorAll('a, .btn, .service-card, .project-card');
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+if (cursor) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
 
-links.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        cursor.classList.add('hovered');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('hovered');
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hovered');
+        });
     });
-    link.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hovered');
-    });
-});
+}
 
 // Navbar Scroll Effect
 const nav = document.querySelector('nav');
@@ -25,6 +27,49 @@ window.addEventListener('scroll', () => {
         nav.classList.remove('scrolled');
     }
 });
+
+// Hero Mouse Parallax
+const hero = document.querySelector('.hero');
+const parallaxLayers = document.querySelectorAll('.parallax-layer');
+const canUseParallax = window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (hero && parallaxLayers.length && canUseParallax) {
+    let parallaxFrame = null;
+    let pointerX = 0;
+    let pointerY = 0;
+
+    const updateHeroParallax = () => {
+        parallaxLayers.forEach((layer) => {
+            const depth = Number(layer.dataset.depth || 12);
+            const baseTransform = layer.dataset.baseTransform ? ` ${layer.dataset.baseTransform}` : '';
+            layer.style.transform = `translate3d(${pointerX * depth}px, ${pointerY * depth}px, 0)${baseTransform}`;
+        });
+
+        parallaxFrame = null;
+    };
+
+    hero.addEventListener('mousemove', (event) => {
+        const rect = hero.getBoundingClientRect();
+        pointerX = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+        pointerY = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
+
+        if (!parallaxFrame) {
+            parallaxFrame = requestAnimationFrame(updateHeroParallax);
+        }
+    });
+
+    hero.addEventListener('mouseleave', () => {
+        if (parallaxFrame) {
+            cancelAnimationFrame(parallaxFrame);
+            parallaxFrame = null;
+        }
+
+        parallaxLayers.forEach((layer) => {
+            layer.style.transform = layer.dataset.baseTransform || 'translate3d(0, 0, 0)';
+        });
+    });
+}
 
 // GSAP Animations
 gsap.registerPlugin(ScrollTrigger);

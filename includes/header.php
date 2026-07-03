@@ -9,10 +9,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/style.css'); ?>">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,7 +29,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container nav-content">
-            <a href="#" class="logo">HANROTA<span style="color:var(--primary-color)">WEB</span></a>
+            <a href="#" class="logo"><span>Hanrota</span><small>Studio</small></a>
             <div class="nav-links">
                 <a href="#home">Ana Sayfa</a>
                 <a href="#about">Hakkımızda</a>
@@ -37,6 +37,6 @@
                 <a href="#projects">Projeler</a>
                 <a href="#contact">İletişim</a>
             </div>
-            <a href="#contact" class="btn" style="padding: 10px 25px; font-size: 0.9rem;">Teklif Al</a>
+            <a href="#contact" class="btn nav-cta">Teklif Al</a>
         </div>
     </nav>
