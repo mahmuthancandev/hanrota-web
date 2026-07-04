@@ -1543,34 +1543,6 @@ nav:not(.scrolled) .btn {
     opacity: 1;
 }
 
-/* Services */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 50px;
-}
-
-.service-card {
-    padding: 40px;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(255, 255, 255, 0.02);
-    transition: 0.3s;
-}
-
-.service-card:hover {
-    background: var(--glass-bg);
-    border-color: var(--primary-color);
-    box-shadow: 0 0 30px rgba(106, 0, 255, 0.2);
-}
-
-.service-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-}
-
 /* Footer */
 footer {
     padding: 50px 0;
@@ -3033,7 +3005,14 @@ nav.scrolled {
 /* White site pass - remove legacy 3D background and fix text spacing */
 html,
 body {
-    background: #ffffff !important;
+    background: #fbfdff !important;
+}
+
+body::before,
+body::after,
+section::before,
+section::after {
+    background-image: none !important;
 }
 
 #webgl-canvas {
@@ -3052,15 +3031,13 @@ section,
 #projects,
 #contact,
 footer {
-    background-color: #ffffff !important;
+    background-color: #fbfdff !important;
     background-image: none !important;
     color: #07111f !important;
 }
 
 .studio-section-muted {
-    background:
-        radial-gradient(circle at 14% 12%, rgba(79, 70, 229, 0.055), transparent 30%),
-        #fbfcff !important;
+    background: #fbfdff !important;
 }
 
 .glass-panel {
@@ -3099,5 +3076,613 @@ nav {
 
 .hero,
 .hero::before {
-    background-color: #ffffff !important;
+    background-color: #fbfdff !important;
+}
+/* Hanrota Services v2 - isolated premium SaaS section */
+#services.hanrota-services-v2 {
+    position: relative !important;
+    z-index: 3 !important;
+    overflow: hidden !important;
+    padding: 136px 0 156px !important;
+    background: #fbfdff !important;
+    background-image: none !important;
+    background-size: auto !important;
+    color: #07111f !important;
+}
+
+.hanrota-services-v2 .container {
+    max-width: 1240px !important;
+}
+
+.hanrota-services-heading {
+    max-width: 760px;
+    margin: 0 auto 46px;
+    text-align: center;
+}
+
+.hanrota-services-heading span {
+    display: inline-flex;
+    min-height: 34px;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 0 14px;
+    border: 1px solid rgba(79, 70, 229, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    color: #4f46e5;
+    font-family: var(--font-main);
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 18px 48px rgba(15, 23, 42, 0.055);
+}
+
+.hanrota-services-heading h2 {
+    max-width: 760px;
+    margin: 0 auto;
+    background: none !important;
+    color: #07111f !important;
+    -webkit-text-fill-color: #07111f !important;
+    font-family: var(--font-main) !important;
+    font-size: clamp(3rem, 6vw, 5.8rem) !important;
+    font-weight: 850 !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+.hanrota-services-heading p {
+    display: none !important;
+}
+
+.hanrota-services-rail {
+    width: 100%;
+    overflow: hidden;
+    padding: 28px 0 34px;
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.hanrota-services-track {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    animation: hanrotaServicesReel 18s linear infinite !important;
+    will-change: transform;
+}
+
+.hanrota-services-rail:hover .hanrota-services-track {
+    animation-play-state: running;
+}
+
+.hanrota-service-card {
+    display: grid;
+    width: 430px;
+    min-height: 560px;
+    grid-template-rows: 270px 1fr;
+    flex: 0 0 430px;
+    padding: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 26px 80px rgba(15, 23, 42, 0.10);
+    transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
+}
+
+.hanrota-service-card:hover {
+    transform: translateY(-12px) scale(1.018);
+    border-color: rgba(79, 70, 229, 0.22);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.96),
+        0 42px 120px rgba(15, 23, 42, 0.16),
+        0 18px 45px rgba(79, 70, 229, 0.10);
+}
+
+.hanrota-service-media {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #f8fafc;
+}
+
+.hanrota-service-media > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.76;
+    transform: scale(1.04);
+    transition: transform 0.55s ease, opacity 0.55s ease;
+}
+
+.hanrota-service-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(15, 23, 42, 0.26)),
+        radial-gradient(circle at 80% 18%, rgba(79, 70, 229, 0.22), transparent 35%);
+}
+
+.hanrota-service-card:hover .hanrota-service-media > img {
+    opacity: 0.88;
+    transform: scale(1.11);
+}
+
+.hanrota-service-body {
+    display: flex;
+    flex-direction: column;
+    padding: 26px 12px 10px;
+}
+
+.hanrota-service-body small {
+    margin-bottom: 10px;
+    color: #4f46e5;
+    font-size: 0.72rem;
+    font-weight: 900;
+}
+
+.hanrota-service-body h3 {
+    margin: 0 0 12px;
+    color: #07111f;
+    font-family: var(--font-main);
+    font-size: 1.45rem;
+    font-weight: 850;
+    line-height: 1.08;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.hanrota-service-body p {
+    margin: 0 0 24px;
+    color: #5f6f84;
+    font-size: 0.94rem;
+    line-height: 1.72;
+}
+
+.hanrota-service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.hanrota-service-tags span {
+    display: inline-flex;
+    min-height: 34px;
+    align-items: center;
+    padding: 0 12px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.78);
+    color: #263244;
+    font-size: 0.76rem;
+    font-weight: 850;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+.hanrota-web-glass {
+    position: absolute;
+    z-index: 2;
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+    display: grid;
+    width: max-content;
+    max-width: calc(100% - 48px);
+    gap: 4px;
+    padding: 12px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.46);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.84);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.hanrota-web-glass span {
+    color: #4f46e5;
+    font-size: 0.66rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.hanrota-web-glass strong {
+    color: #07111f;
+    font-size: 0.98rem;
+    line-height: 1.12;
+}
+
+.hanrota-web-glass small {
+    color: #64748b;
+    font-size: 0.66rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hanrota-service-phone,
+.hanrota-service-qr-media {
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.18), transparent 34%),
+        linear-gradient(180deg, #ffffff, #f8fafc);
+}
+
+.hanrota-phone-shell {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 142px;
+    height: 224px;
+    padding: 28px 18px 20px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 34px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.13);
+    animation: hanrotaPhoneDrift 5.5s ease-in-out infinite;
+}
+
+.hanrota-phone-notch {
+    position: absolute;
+    top: 14px;
+    width: 36px;
+    height: 5px;
+    border-radius: 999px;
+    background: #dbe3ef;
+}
+
+.hanrota-phone-shell img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 28px rgba(245, 122, 22, 0.24));
+}
+
+.hanrota-phone-shell strong,
+.hanrota-phone-shell small {
+    display: block;
+}
+
+.hanrota-phone-shell strong {
+    color: #07111f;
+    font-size: 1rem;
+}
+
+.hanrota-phone-shell small {
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.hanrota-floating-badge {
+    position: absolute;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border: 1px solid rgba(79, 70, 229, 0.10);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #4f46e5;
+    font-size: 0.72rem;
+    font-weight: 900;
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.10);
+}
+
+.hanrota-floating-badge i {
+    font-size: 0.9rem;
+}
+
+.hanrota-badge-one {
+    left: 34px;
+    top: 40px;
+    animation: hanrotaFloatOne 5s ease-in-out infinite;
+}
+
+.hanrota-badge-two {
+    right: 34px;
+    bottom: 42px;
+    animation: hanrotaFloatTwo 5.6s ease-in-out infinite;
+}
+
+.hanrota-qr-image {
+    position: absolute;
+    z-index: 2;
+    left: 34px;
+    top: 38px;
+    width: 142px !important;
+    height: 142px !important;
+    padding: 10px;
+    border-radius: 24px;
+    object-fit: contain !important;
+    background: #fff;
+    opacity: 1 !important;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.13);
+    animation: hanrotaQrScan 4.5s ease-in-out infinite;
+    transform: none !important;
+}
+
+.hanrota-qr-menu-card {
+    position: absolute;
+    z-index: 2;
+    right: 32px;
+    bottom: 40px;
+    width: 152px;
+    padding: 18px;
+    border: 1px solid rgba(79, 70, 229, 0.10);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.13);
+}
+
+.hanrota-qr-menu-card strong,
+.hanrota-qr-menu-card small {
+    display: block;
+}
+
+.hanrota-qr-menu-card strong {
+    color: #07111f;
+    font-size: 0.95rem;
+}
+
+.hanrota-qr-menu-card small {
+    color: #64748b;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+.hanrota-flow-card {
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 78px;
+    height: 46px;
+    border: 1px solid rgba(79, 70, 229, 0.12);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.90);
+    color: #07111f;
+    font-size: 0.75rem;
+    font-weight: 900;
+    box-shadow: 0 20px 52px rgba(15, 23, 42, 0.13);
+}
+
+.hanrota-flow-a { left: 30px; top: 38px; }
+.hanrota-flow-b { left: 50%; top: 112px; transform: translateX(-50%); }
+.hanrota-flow-c { right: 32px; bottom: 36px; }
+
+.hanrota-flow-beam {
+    position: absolute;
+    z-index: 2;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(79, 70, 229, 0.20), #06b6d4);
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.32);
+}
+
+.hanrota-beam-one { left: 94px; top: 84px; width: 160px; rotate: 23deg; }
+.hanrota-beam-two { right: 96px; bottom: 84px; width: 160px; rotate: 23deg; }
+
+.hanrota-ai-core {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 116px;
+    height: 116px;
+    border-radius: 34px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.94), rgba(236, 72, 153, 0.88));
+    color: #ffffff;
+    box-shadow: 0 26px 80px rgba(79, 70, 229, 0.28);
+    transform: translate(-50%, -50%);
+}
+
+.hanrota-ai-core span {
+    position: absolute;
+    inset: -34px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    animation: hanrotaAiOrbit 12s linear infinite;
+}
+
+.hanrota-ai-core strong {
+    font-size: 1.35rem;
+}
+
+.hanrota-ai-node {
+    position: absolute;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #67e8f9;
+    box-shadow: 0 0 0 10px rgba(103, 232, 249, 0.12);
+    animation: hanrotaPulse 2.3s ease-in-out infinite;
+}
+
+.hanrota-node-one { left: 68px; top: 60px; }
+.hanrota-node-two { right: 74px; top: 76px; background: #f0abfc; animation-delay: -0.7s; }
+.hanrota-node-three { right: 124px; bottom: 48px; background: #a78bfa; animation-delay: -1.3s; }
+
+@keyframes hanrotaServicesReel {
+    from { transform: translate3d(0, 0, 0); }
+    to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes hanrotaFloatOne {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(14px, -10px, 0); }
+}
+
+@keyframes hanrotaFloatTwo {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-12px, 12px, 0); }
+}
+
+@keyframes hanrotaFloatThree {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(10px, 8px, 0); }
+}
+
+@keyframes hanrotaPhoneDrift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes hanrotaQrScan {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes hanrotaPulse {
+    0%, 100% { opacity: 0.72; transform: translateY(-50%) scale(0.88); }
+    50% { opacity: 1; transform: translateY(-50%) scale(1.22); }
+}
+
+@keyframes hanrotaAiOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes hanrotaStageSweep {
+    0%, 20% { transform: translateX(-100%); opacity: 0; }
+    45% { opacity: 1; }
+    80%, 100% { transform: translateX(100%); opacity: 0; }
+}
+
+@media (max-width: 1080px) {
+
+    .hanrota-services-track {
+        animation-duration: 16s !important;
+    }
+}
+
+@media (max-width: 760px) {
+    #services.hanrota-services-v2 {
+        padding: 96px 0 108px !important;
+    }
+
+    .hanrota-services-heading {
+        text-align: left;
+    }
+
+    .hanrota-services-heading h2 {
+        font-size: 2.48rem !important;
+    }
+
+    .hanrota-services-heading p {
+        font-size: 0.96rem;
+    }
+
+    .hanrota-service-card {
+        width: min(86vw, 390px);
+        flex-basis: min(86vw, 390px);
+    }
+
+    .hanrota-services-track {
+        animation-duration: 14s !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hanrota-services-track {
+        animation: hanrotaServicesReel 18s linear infinite !important;
+    }
+}
+
+/* Final flat SaaS background override */
+html,
+body,
+.hero,
+.capability-strip,
+.studio-section,
+.studio-section-muted,
+.final-cta,
+#about,
+#services,
+#projects,
+#contact,
+footer {
+    background: #fbfdff !important;
+    background-color: #fbfdff !important;
+    background-image: none !important;
+}
+
+body::before,
+body::after,
+section::before,
+section::after,
+.hero::before,
+.hero::after,
+#services::before,
+#services::after,
+#projects::before,
+#projects::after,
+#contact::before,
+#contact::after,
+#about::before,
+#about::after {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Final section rhythm: tighter hero-to-services SaaS flow */
+.scroll-indicator,
+.capability-strip {
+    display: none !important;
+}
+
+.hero {
+    min-height: auto !important;
+    padding: 112px 0 28px !important;
+}
+
+.hero-layout {
+    align-items: center !important;
+}
+
+#services.hanrota-services-v2 {
+    margin-top: 0 !important;
+    padding: 34px 0 138px !important;
+}
+
+.hanrota-services-heading {
+    margin-bottom: 42px !important;
+}
+
+.hanrota-services-heading span {
+    margin-bottom: 14px !important;
+}
+
+.hanrota-services-rail {
+    padding-top: 8px !important;
+}
+
+@media (max-width: 940px) {
+    .hero {
+        padding: 104px 0 24px !important;
+    }
+
+    #services.hanrota-services-v2 {
+        padding-top: 30px !important;
+    }
+}
+
+@media (max-width: 760px) {
+    .hero {
+        padding: 94px 0 18px !important;
+    }
+
+    #services.hanrota-services-v2 {
+        padding: 26px 0 104px !important;
+    }
 }
